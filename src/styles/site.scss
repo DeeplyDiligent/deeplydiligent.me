@@ -1,0 +1,53 @@
+body {
+  background-color: #726e6e;
+}
+
+.custom-border-radius {
+  border-radius: 17px;
+}
+
+.max-lines {
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  max-height: 5.4em;
+  line-height: 1.8em;
+}
+
+.custom-responsive-image {
+  max-width: 100%;
+  @media (max-width: 768px) {
+    max-height: 150px;
+    padding-right: 1.5rem;
+  }
+}
+
+.custom-padding-footer {
+  padding-left: 85px;
+  @media (max-width: 768px) {
+    padding-left: 0px;
+  }
+}
+
+.fade-to-white {
+  position: absolute;
+  right: 44px;
+  height: 48px;
+  width: 50px;
+  background: linear-gradient(-90deg, white 0%, transparent 102%);
+  transition: opacity 0.2s ease-in;
+  opacity: 1;
+}
+.fade-to-white.hide {
+  opacity: 0;
+}
+
+.btn.pill-button:hover {
+  background-color: #d8d8d8 !important;
+}
+
+.no-scrollbars::-webkit-scrollbar{
+    display: none;
+}

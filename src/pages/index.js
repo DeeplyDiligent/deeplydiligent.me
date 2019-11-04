@@ -1,20 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Tagline from "../components/page-components/1-tagline"
+import CurrentWork from "../components/page-components/2-currentWork"
+import Blogs from "../components/page-components/3-blogs"
+import Podcasts from "../components/page-components/4-podcasts"
+import Projects from "../components/page-components/5-projects"
+import Missed from "../components/page-components/6-missed"
+import ConnectWithMe from "../components/page-components/7-connectWithMe"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className="text-white">
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Tagline/>
+    <CurrentWork />
+    <Blogs />
+    <Podcasts />
+    <Projects />
+    <Missed />
+    <ConnectWithMe/>
   </Layout>
 )
 

@@ -1,0 +1,157 @@
+{
+  "navbar": [
+    { "name": "Experience", "link": "" },
+    { "name": "Projects", "link": "" },
+    { "name": "Podcasts", "link": "" },
+    { "name": "Blog", "link": "" }
+  ],
+  "heading": {
+    "heading-1": "I'm Deep,",
+    "heading-2": "an aspiring entrepreneur and innovator with mad tech skills.",
+    "headingButtons": [
+      { "name": "LinkedIn", "link": "//linkedin.com/in/DeeplyDiligent" },
+      {
+        "name": "Resume",
+        "link": "https://drive.google.com/file/d/1CvxqzWfT4ez3dy7dDprLVms1cf13qkzZ/view?usp=sharing"
+      }
+    ]
+  },
+  "workExperience": {
+    "cards": [
+      {
+        "title": "Full Stack Developer",
+        "subTitle": "- Learnmate",
+        "body": "I build and manage automated systems to process thousands of transactions, and offer an easy to use interface for hunderds of thousands of customers and staff."
+      },
+      {
+        "title": "Mobile App Engineer",
+        "subTitle": "- Monash University",
+        "body": "I plan, build and deploy an android application used by thousands of students on a daily basis. I also do presentations to stakeholders and hold workshops to inspire others."
+      }
+    ]
+  },
+  "blog": {
+    "mediumRssLink": "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fdeeplydiligent-blog"
+  },
+  "podcast": {
+    "anchorRssLink": "https://anchor.fm/s/9884c68/podcast/rss"
+  },
+  "projects": {
+    "projectList": [
+      {
+        "title": "UniBoard",
+        "description": "Led a team of developers and markerters to create a Chrome Extension and Web App that provided Monash University students with better access to their Learning Management System, Moodle. The extension currently has more than 500 happy users, and can be found at https://uniboard.app/",
+        "img": "images/projects/uniboard.png",
+        "link": "https://uniboard.app",
+        "dateLaunched": "January 2019 • 1000+ Users on Chrome Web Store",
+        "technologies": [
+          "ReactJS",
+          "Flutter Mobile App",
+          "NodeJS Backend",
+          "Chrome and Firefox Extensions"
+        ]
+      },
+      {
+        "title": "Employee Tracker",
+        "description": "Created an employee tracker currently used by a team of 100+ developers, BAs and managers. The tracker allows managers to track holidays, work from home days and half days easily.",
+        "img": "images/projects/diligentlist.png",
+        "link": "https://github.com/DeeplyDiligent/diligenttracker-2.0",
+        "dateLaunched": "January 2016 • In Use By 100+ People Team",
+        "technologies": [
+          "PHP",
+          "Laravel",
+          "Wordpress",
+          "mySQL",
+          "dBeaver",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery"
+        ]
+      },
+      {
+        "title": "ClovAR",
+        "description": "ClovAR is a platform to take time out in nature. I designed the backend python system architecture, as well as created graphics, animations and models for the trees.",
+        "img": "images/projects/clovAR.png",
+        "link": "https://github.com/RameshNikhil/ClovAR_App",
+        "dateLaunched": "September 2019 • People's Choice For Design and Creativity",
+        "technologies": [
+          "Second Place",
+          "Monash BitByBit Hack",
+          "Flutter",
+          "Ar.JS",
+          "ReactJS",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "title": "GitHistory",
+        "description": "Contributed to an Open Source project by creating a chrome extension which allows users to see an animated git history of any file on github with the simple click of a button.",
+        "img": "images/projects/gitHistory.png",
+        "link": "https://github.com/DeeplyDiligent/github-history-extension",
+        "dateLaunched": "February 2019 • ReactJS Extension with 100+ users",
+        "technologies": [
+          "Chrome Extension",
+          "GitHub",
+          "ReactJS",
+          "HTML",
+          "Browser",
+          "DOM Manipulation",
+          "CSS"
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "certList": [
+      {
+        "name": "ITIL 4 Foundations Certification - By Axios",
+        "description": "",
+        "dates": "Attained Nov 2019 • Delivered By PeopleCert",
+        "image": "images/projects/itilCert.png",
+        "verificationLink": "https://www.youracclaim.com/badges/471f536c-6a0f-45af-9e08-1df3f648582a/linked_in_profile"
+      },
+      {
+        "name": "PMI Certified Associate Project Manager",
+        "description": "",
+        "dates": "Attained June 2018 • By PMI",
+        "image": "images/projects/capmCert.png",
+        "verificationLink": "https://www.youracclaim.com/badges/199ec681-09b6-4092-9fcd-76d729e4b3c4/linked_in_profile"
+      },
+      {
+        "name": "Certificate IV in Leadership and Management",
+        "description": "",
+        "dates": "Attained Jan 2019 • By MTPD",
+        "image": "images/projects/mtpd.png",
+        "verificationLink": "#"
+      },
+      {
+        "name": "Machine Learning & AI Foundations",
+        "description": "",
+        "dates": "Attained Mar 2018 • By Lynda.com",
+        "image": "images/projects/lyndaCert.png",
+        "verificationLink": "#"
+      }
+    ]
+  },
+  "competitions": {
+    "competitionList": [
+      {
+        "name": "GCG and Protivity Case Competition",
+        "description": "The challenge was to design and estimate the cost to build a city in a minimal amount of time. I was responsible for finiding estimates of building material and other resources. ",
+        "dates": "Runners Up Award • Attained Oct 2018 • By Protivity and Global Consulting Group",
+        "image": "images/projects/protivity.png",
+        "link": "#"
+      },
+      {
+        "name": "SSW Angular Hackathon",
+        "description": "Pitched an idea with the Youtube API to create a better viewing experience for watching videos from subscriptions. ",
+        "dates": "Runners Up Award • Attained Mar 2018 • By SSW",
+        "image": "images/projects/ssw-logo.png",
+        "link": "#"
+      }
+    ]
+  }
+}

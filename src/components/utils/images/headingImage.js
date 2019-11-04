@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import LinkedinLogoImg from '../../../images/linkedin.svg'
+import PropTypes from "prop-types"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +15,18 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const HeadingImage = ({ classNameParent, image, width }) => {
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+
+  return (
+    <div className={classNameParent} style={{width, overflow:"none", position:"absolute", margin: '-11px 0 0 -58px'}}>
+      {image}
+    </div>
+  )
 }
 
-export default Image
+HeadingImage.propTypes = {
+  className: PropTypes.string,
+}
+
+export default HeadingImage
