@@ -6,10 +6,10 @@ import {
   MDBNavbarToggler,
   MDBCollapse,
   MDBNavItem,
-  MDBNavLink,
+  MDBBtn,
 } from "mdbreact"
-import { BrowserRouter as Router } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
+import NavButton from "../utils/button/navButton"
 
 const Header = React.memo(({ refs, siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,10 +20,10 @@ const Header = React.memo(({ refs, siteTitle }) => {
   const executeScroll = myRef => {
     console.log(myRef)
     window.scrollTo({
-      top: myRef.current.offsetTop-50,
+      top: myRef.current.offsetTop - 50,
       left: 0,
-      behavior: 'smooth'
-    });
+      behavior: "smooth",
+    })
   }
 
   const data = useStaticQuery(graphql`
@@ -56,53 +56,53 @@ const Header = React.memo(({ refs, siteTitle }) => {
     setIsOpen(!isOpen)
   }
   return (
-    <Router>
-      <MDBNavbar
-        color={navColor}
-        dark
-        expand="md"
-        className={`sticky-top scrolling-navbar fadeIn ${navCollapse}`}
-        style={{
-          zIndex: 1,
-          transition:
-            "background 0.5s ease-in-out, padding 0.5s ease-in-out, box-shadow 0.5s ease-in-out",
-          ...navShadow,
-        }}
-      >
-        <div className="container">
-          <MDBNavbarBrand>
-            <img
-              alt="logo"
-              className="mr-3"
-              style={{ width: "1.5rem" }}
-              src={"/icons/lightning.svg"}
-            ></img>
-            <strong className="white-text">{siteTitle}</strong>
-          </MDBNavbarBrand>
-          <MDBNavbarToggler onClick={toggleCollapse} className="pr-0" />
-          <MDBCollapse
-            id="navbarCollapse"
-            style={{ transition: "height 0.3s ease-out" }}
-            isOpen={isOpen}
-            navbar
-          >
-            {/* <MDBNavbarNav left>
+    <MDBNavbar
+      color={navColor}
+      dark
+      expand="md"
+      className={`sticky-top scrolling-navbar fadeIn ${navCollapse}`}
+      style={{
+        zIndex: 1,
+        transition:
+          "background 0.5s ease-in-out, padding 0.5s ease-in-out, box-shadow 0.5s ease-in-out",
+        ...navShadow,
+      }}
+    >
+      <div className="container">
+        <MDBNavbarBrand>
+          <img
+            alt="logo"
+            className="mr-3"
+            style={{ width: "1.5rem" }}
+            src={"/icons/lightning.svg"}
+          ></img>
+          <strong className="white-text">{siteTitle}</strong>
+        </MDBNavbarBrand>
+        <MDBNavbarToggler onClick={toggleCollapse} className="pr-0" />
+        <MDBCollapse
+          id="navbarCollapse"
+          style={{ transition: "height 0.3s ease-out" }}
+          isOpen={isOpen}
+          navbar
+        >
+          {/* <MDBNavbarNav left>
           </MDBNavbarNav> */}
-            <MDBNavbarNav right>
-              {data.map(item => (
-                <MDBNavItem
-                  key={item.name}
-                  onClick={() => executeScroll(refs[item.ref])}
-                  className="mr-2"
-                >
-                  <MDBNavLink to={item.link}>{item.name}</MDBNavLink>
-                </MDBNavItem>
-              ))}
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </div>
-      </MDBNavbar>
-    </Router>
+          <MDBNavbarNav right>
+            {data.map(item => (
+              <MDBNavItem
+                key={item.name}
+                onClick={() => executeScroll(refs[item.ref])}
+                className="mr-2"
+              >
+                <NavButton size="sm" color="white">
+                  {item.name}
+                </NavButton>
+              </MDBNavItem>
+            ))}
+          </MDBNavbarNav>
+        </MDBCollapse>
+      </div>
+    </MDBNavbar>
   )
 })
 
