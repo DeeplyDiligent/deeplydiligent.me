@@ -11,12 +11,20 @@ import {
 import { BrowserRouter as Router } from "react-router-dom"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Header = React.memo(props => {
+const Header = React.memo(({ refs, siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [atTop, setAtTop] = useState(true)
   const [navCollapse, setNavCollapse] = useState("")
   const [navColor, setNavColor] = useState("")
   const [navShadow, setNavShadow] = useState({ boxShadow: "none" })
+  const executeScroll = myRef => {
+    console.log(myRef)
+    window.scrollTo({
+      top: myRef.current.offsetTop-50,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 
   const data = useStaticQuery(graphql`
     query headerQuery {
@@ -25,6 +33,7 @@ const Header = React.memo(props => {
           navbar {
             name
             link
+            ref
           }
         }
       }
@@ -53,7 +62,12 @@ const Header = React.memo(props => {
         dark
         expand="md"
         className={`sticky-top scrolling-navbar fadeIn ${navCollapse}`}
-        style={{ zIndex: 1, transition:"background 0.5s ease-in-out, padding 0.5s ease-in-out, box-shadow 0.5s ease-in-out",  ...navShadow }}
+        style={{
+          zIndex: 1,
+          transition:
+            "background 0.5s ease-in-out, padding 0.5s ease-in-out, box-shadow 0.5s ease-in-out",
+          ...navShadow,
+        }}
       >
         <div className="container">
           <MDBNavbarBrand>
@@ -63,15 +77,24 @@ const Header = React.memo(props => {
               style={{ width: "1.5rem" }}
               src={"/icons/lightning.svg"}
             ></img>
-            <strong className="white-text">DeeplyDiligent</strong>
+            <strong className="white-text">{siteTitle}</strong>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={toggleCollapse} className="pr-0" />
-          <MDBCollapse id="navbarCollapse" style={{transition:"height 0.3s ease-out"}} isOpen={isOpen} navbar>
+          <MDBCollapse
+            id="navbarCollapse"
+            style={{ transition: "height 0.3s ease-out" }}
+            isOpen={isOpen}
+            navbar
+          >
             {/* <MDBNavbarNav left>
           </MDBNavbarNav> */}
             <MDBNavbarNav right>
               {data.map(item => (
-                <MDBNavItem key={item.name} className="mr-2">
+                <MDBNavItem
+                  key={item.name}
+                  onClick={() => executeScroll(refs[item.ref])}
+                  className="mr-2"
+                >
                   <MDBNavLink to={item.link}>{item.name}</MDBNavLink>
                 </MDBNavItem>
               ))}

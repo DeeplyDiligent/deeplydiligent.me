@@ -1,5 +1,6 @@
 body {
   background-color: #726e6e;
+  font-family: 'Product Sans';
 }
 
 .custom-border-radius {
@@ -31,6 +32,12 @@ body {
   }
 }
 
+.center-mobile{
+  @media (max-width: 575px) {
+    text-align: center;
+  }
+}
+
 .fade-to-white {
   position: absolute;
   right: 44px;
@@ -50,4 +57,9 @@ body {
 
 .no-scrollbars::-webkit-scrollbar{
     display: none;
+}
+
+@font-face{
+  font-family: 'Product Sans';
+  src: URL('/font/productsans.ttf') format('truetype');
 }

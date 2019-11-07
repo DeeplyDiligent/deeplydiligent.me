@@ -6,9 +6,9 @@ import Convert from "xml-js"
 import TransluscentButton from "../utils/button/transluscentButton"
 import LinkedinLogoImg from "../../images/linkedin.svg"
 import MessengerLogoImg from "../../images/messenger.svg"
-const ConnectWithMe = () => {
+const ConnectWithMe = React.forwardRef(({}, ref) => {
   return (
-    <div className="container mx-auto mt-5 px-0">
+    <div className="container mx-auto mt-5 px-0" ref={ref}>
       <div
         style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
         className="w-100 bg-white text-body justify-content-center custom-border-radius pb-4 pt-5"
@@ -36,6 +36,6 @@ const ConnectWithMe = () => {
       </div>
     </div>
   )
-}
+});
 
 export default ConnectWithMe

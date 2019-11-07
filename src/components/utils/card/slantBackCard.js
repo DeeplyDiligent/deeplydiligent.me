@@ -1,7 +1,7 @@
 import React from "react"
 import SlantBack from "../../../images/slantBack.svg"
 const SlantBackCard = ({ children, rightShort = false }) => {
-  const { leftShortTransform, rightShortTransform } = {
+  const { leftShortTransform, rightShortTransform, ref} = {
     leftShortTransform: ["", "scaleY(-1)"],
     rightShortTransform: ["scaleX(-1)", "scaleY(-1) scaleX(-1)"],
   }

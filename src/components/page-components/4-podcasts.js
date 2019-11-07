@@ -4,13 +4,14 @@ import Card from "../utils/card/card"
 import { useStaticQuery, graphql } from "gatsby"
 import Convert from "xml-js"
 import TransluscentButton from "../utils/button/transluscentButton"
-const Podcasts = () => {
+const Podcasts = React.forwardRef(({}, ref) => {
   const data = useStaticQuery(graphql`
     query {
       allDataJson {
         nodes {
           podcast {
             anchorRssLink
+            moreLink
           }
         }
       }
@@ -29,7 +30,8 @@ const Podcasts = () => {
           description: podcast.elements.find(x => x.name === "description")
             .elements[0].cdata,
           link: podcast.elements.find(x => x.name === "link").elements[0].text,
-          pubDate: podcast.elements.find(x => x.name === "pubDate").elements[0].text,
+          pubDate: podcast.elements.find(x => x.name === "pubDate").elements[0]
+            .text,
         }))
 
         setRssData(data.slice(0, 4))
@@ -37,7 +39,7 @@ const Podcasts = () => {
   }, [])
 
   return (
-    <div className="container d-flex flex-column mx-auto">
+    <div className="container d-flex flex-column mx-auto" ref={ref}>
       <h1 className="offset-md-1 my-5 pl-4  font-weight-bold">
         I Make Podcasts...
       </h1>
@@ -60,12 +62,12 @@ const Podcasts = () => {
         )}
       </div>
       <div className="mb-5 mt-4 mx-auto">
-        <TransluscentButton>
+        <TransluscentButton href={data.allDataJson.nodes[0].podcast.moreLink}>
           <h6 className="font-weight-bold mb-0">Hear More...</h6>
         </TransluscentButton>
       </div>
     </div>
   )
-}
+})
 
 export default Podcasts

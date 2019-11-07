@@ -1,9 +1,10 @@
 {
   "navbar": [
-    { "name": "Experience", "link": "" },
-    { "name": "Projects", "link": "" },
-    { "name": "Podcasts", "link": "" },
-    { "name": "Blog", "link": "" }
+    { "name": "Blog", "link": "", "ref": "blogRef" },
+    { "name": "Podcasts", "link": "", "ref": "podcastsRef" },
+    { "name": "Projects", "link": "", "ref": "projectsRef" },
+    { "name": "Certifications & Awards", "link": "", "ref": "certsRef" },
+    { "name": "Contact", "link": "", "ref": "contactRef" }
   ],
   "heading": {
     "heading-1": "I'm Deep,",
@@ -20,7 +21,7 @@
     "cards": [
       {
         "title": "Full Stack Developer",
-        "subTitle": "- Learnmate",
+        "subTitle": "- Learnmate (Part Time)",
         "body": "I build and manage automated systems to process thousands of transactions, and offer an easy to use interface for hunderds of thousands of customers and staff."
       },
       {
@@ -28,13 +29,16 @@
         "subTitle": "- Monash University",
         "body": "I plan, build and deploy an android application used by thousands of students on a daily basis. I also do presentations to stakeholders and hold workshops to inspire others."
       }
-    ]
+    ],
+    "moreLink":"https://medium.com/@deeplydiligent/what-is-my-life-mission-f7eb2281ba4b"
   },
   "blog": {
-    "mediumRssLink": "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fdeeplydiligent-blog"
+    "mediumRssLink": "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fdeeplydiligent-blog",
+    "moreLink": "https://medium.com/deeplydiligent-blog"
   },
   "podcast": {
-    "anchorRssLink": "https://anchor.fm/s/9884c68/podcast/rss"
+    "anchorRssLink": "https://anchor.fm/s/9884c68/podcast/rss",
+    "moreLink":"https://anchor.fm/deeplydiligent"
   },
   "projects": {
     "projectList": [
@@ -102,7 +106,8 @@
           "CSS"
         ]
       }
-    ]
+    ],
+    "moreLink":"https://github.com/deeplydiligent"
   },
   "certifications": {
     "certList": [

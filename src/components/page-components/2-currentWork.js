@@ -5,7 +5,7 @@ import TitleText from "../utils/fontSize/titleText"
 import Card from "../utils/card/card"
 import { useStaticQuery, graphql } from "gatsby"
 import TransluscentButton from "../utils/button/transluscentButton"
-const CurrentWork = () => {
+const CurrentWork = React.forwardRef(({},ref) => {
   const data = useStaticQuery(graphql`
     query {
       allDataJson {
@@ -16,13 +16,14 @@ const CurrentWork = () => {
               subTitle
               title
             }
+            moreLink
           }
         }
       }
     }
   `)
   return (
-    <div className="m-auto py-5 container">
+    <div className="m-auto pb-5 pt-2 container" ref={ref}>
       <TitleText className="row d-flex justify-content-center mb-4">
         Currently, I work as a...
       </TitleText>
@@ -37,7 +38,7 @@ const CurrentWork = () => {
         ))}
       </div>
       <div className="mx-auto d-table">
-        <TransluscentButton>
+        <TransluscentButton href={data.allDataJson.nodes[0].workExperience.moreLink}>
           <h6
             style={{ textTransform: "none" }}
             className="font-weight-bold mb-0"
@@ -48,6 +49,6 @@ const CurrentWork = () => {
       </div>
     </div>
   )
-}
+})
 
 export default CurrentWork

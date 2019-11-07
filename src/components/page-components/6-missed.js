@@ -4,7 +4,7 @@ import Card from "../utils/card/card"
 import { useStaticQuery, graphql } from "gatsby"
 import Convert from "xml-js"
 import TransluscentButton from "../utils/button/transluscentButton"
-const Missed = () => {
+const Missed = React.forwardRef(({}, ref) => {
   const data = useStaticQuery(graphql`
     query {
       allDataJson {
@@ -18,8 +18,8 @@ const Missed = () => {
               verificationLink
             }
           }
-          competitions{
-            competitionList{
+          competitions {
+            competitionList {
               name
               description
               image
@@ -34,7 +34,10 @@ const Missed = () => {
 
   return (
     <div className="container d-flex flex-column mx-auto">
-      <h1 className="offset-md-1 mt-5 mb-4 pl-4 pt-5 font-weight-bold">
+      <h1
+        className="offset-md-1 mt-5 mb-4 pl-4 pt-5 font-weight-bold"
+        ref={ref}
+      >
         What I've Missed...
       </h1>
       <h3 className="offset-md-1 pl-4 font-weight-bold my-4">Certifications</h3>
@@ -52,7 +55,9 @@ const Missed = () => {
         ))}
       </div>
 
-      <h3 className="offset-md-1 pl-4 mt-5 mb-4 font-weight-bold">Competitions</h3>
+      <h3 className="offset-md-1 pl-4 mt-5 mb-4 font-weight-bold">
+        Competitions
+      </h3>
       <div className="row offset-md-1 col-md-10 mx-auto">
         {data.allDataJson.nodes[0].competitions.competitionList.map(cert => (
           <Card
@@ -69,6 +74,6 @@ const Missed = () => {
       <div className="row offset-md-1 col-md-10 mx-auto"></div>
     </div>
   )
-}
+})
 
 export default Missed

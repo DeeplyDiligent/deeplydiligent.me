@@ -43,13 +43,12 @@ const Tagline = () => {
           </SubHeadingText>
         </div>
       </div>
-      <div className="d-flex justify-content-center text-dark mt-4 py-3">
+      <div className="d-flex justify-content-center text-dark mt-3 py-3 flex-wrap">
         <HeadingButton
           href={data.allDataJson.nodes[0].heading.headingButtons[0].link}
           text={data.allDataJson.nodes[0].heading.headingButtons[0].name}
           image={<HeadingImage width="47px" image={<LinkedinLogoImg />} />}
         />
-        <div style={{ width: "42px" }}></div>
         <HeadingButton
           href={data.allDataJson.nodes[0].heading.headingButtons[1].link}
           text={data.allDataJson.nodes[0].heading.headingButtons[1].name}
