@@ -42,7 +42,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn deploy",
-    "deploy": "gatsby build && firebase deploy",
+    "deploy": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
