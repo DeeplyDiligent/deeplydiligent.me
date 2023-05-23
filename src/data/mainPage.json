@@ -8,37 +8,32 @@
   ],
   "heading": {
     "heading-1": "I'm Deep,",
-    "heading-2": "an aspiring entrepreneur and innovator with mad tech skills.",
+    "heading-2": "a passionate developer advocate, ready to dive into the world of cutting-edge technology and create transformative solutions.",
     "headingButtons": [
-      { "name": "LinkedIn", "link": "//linkedin.com/in/DeeplyDiligent" },
+      { "name": "LinkedIn", "link": "https://linkedin.com/in/DeeplyDiligent" },
       {
         "name": "Resume",
-        "link": "https://drive.google.com/file/d/1CvxqzWfT4ez3dy7dDprLVms1cf13qkzZ/view?usp=sharing"
+        "link": "https://docs.google.com/file/d/1OMh-OMza8EUq7zQU_6vlqPezUpJNOggO/edit"
       }
     ]
   },
   "workExperience": {
     "cards": [
       {
-        "title": "Full Stack Developer",
-        "subTitle": "- Learnmate (Part Time)",
-        "body": "I build and manage automated systems to process thousands of transactions, and offer an easy to use interface for hunderds of thousands of customers and staff."
-      },
-      {
-        "title": "Mobile App Engineer",
-        "subTitle": "- Monash University",
-        "body": "I plan, build and deploy an android application used by thousands of students on a daily basis. I also do presentations to stakeholders and hold workshops to inspire others."
+        "title": "Cloud Solutions Architect",
+        "subTitle": "- Microsoft",
+        "body": "I help customers to design and implement scalable, secure, and reliable cloud-based solutions. With expertise in cloud technologies, I empower businesses to embrace digital transformation, architecting complex cloud infrastructures to optimizing performance and ensuring seamless integration with all other services."
       }
     ],
-    "moreLink":"https://medium.com/@deeplydiligent/what-is-my-life-mission-f7eb2281ba4b"
+    "moreLink":"https://www.linkedin.com/in/deeplydiligent/"
   },
   "blog": {
     "mediumRssLink": "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fdeeplydiligent-blog",
     "moreLink": "https://medium.com/deeplydiligent-blog"
   },
   "podcast": {
-    "anchorRssLink": "https://anchor.fm/s/9884c68/podcast/rss",
-    "moreLink":"https://anchor.fm/deeplydiligent"
+    "anchorRssLink": "https://anchor.fm/s/5e5de2c0/podcast/rss",
+    "moreLink":"https://open.spotify.com/show/1VqngzYY2SJo46joTwmkNw"
   },
   "projects": {
     "projectList": [
@@ -112,11 +107,11 @@
   "certifications": {
     "certList": [
       {
-        "name": "ITIL 4 Foundations Certification - By Axios",
+        "name": "Microsoft Certified - Solutions Architect Expert",
         "description": "",
-        "dates": "Attained Nov 2019 • Delivered By PeopleCert",
-        "image": "images/projects/ITILcert.png",
-        "verificationLink": "https://www.youracclaim.com/badges/471f536c-6a0f-45af-9e08-1df3f648582a/linked_in_profile"
+        "dates": "Attained Nov 2019 • Verified By Microsoft",
+        "image": "images/Microsoft_logo.svg.png",
+        "verificationLink": "https://www.credly.com/badges/70e77aae-8a93-49bc-bff2-2b03bd7bb48c/linked_in_profile"
       },
       {
         "name": "PMI Certified Associate Project Manager",
@@ -124,13 +119,6 @@
         "dates": "Attained June 2018 • By PMI",
         "image": "images/projects/capmCert.png",
         "verificationLink": "https://www.youracclaim.com/badges/199ec681-09b6-4092-9fcd-76d729e4b3c4/linked_in_profile"
-      },
-      {
-        "name": "Certificate IV in Leadership and Management",
-        "description": "",
-        "dates": "Attained Jan 2019 • By MTPD",
-        "image": "images/projects/mtpd.png",
-        "verificationLink": "#"
       },
       {
         "name": "Machine Learning & AI Foundations",
@@ -144,10 +132,10 @@
   "competitions": {
     "competitionList": [
       {
-        "name": "GCG and Protivity Case Competition",
-        "description": "The challenge was to design and estimate the cost to build a city in a minimal amount of time. I was responsible for finiding estimates of building material and other resources. ",
-        "dates": "Runners Up Award • Attained Oct 2018 • By Protivity and Global Consulting Group",
-        "image": "images/projects/protivity.png",
+        "name": "Microsoft Openhack",
+        "description": "I had the opportunity to master Kubernetes and learn efficient utilization of this powerful container orchestration platform. Through hands-on challenges and collaborative exercises, I gained practical insights into building resilient, scalable, and cloud-native solutions using Kubernetes.",
+        "dates": "Attained Oct 2018 • By Microsoft",
+        "image": "images/Microsoft_logo.svg.png",
         "link": "#"
       },
       {
