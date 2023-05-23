@@ -9,9 +9,13 @@ jobs:
   deploy_live_website:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '10'
       - uses: actions/checkout@v2
       # Add any build steps here. For example:
       - run: sudo apt-get install -y python2
+      
       - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
