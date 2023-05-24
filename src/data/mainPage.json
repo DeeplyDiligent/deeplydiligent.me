@@ -110,7 +110,7 @@
         "name": "Microsoft Certified - Solutions Architect Expert",
         "description": "",
         "dates": "Attained Nov 2019 • Verified By Microsoft",
-        "image": "images/Microsoft_logo.svg.png",
+        "image": "images/projects/Microsoft_logo.svg.png",
         "verificationLink": "https://www.credly.com/badges/70e77aae-8a93-49bc-bff2-2b03bd7bb48c/linked_in_profile"
       },
       {
@@ -135,11 +135,11 @@
         "name": "Microsoft Openhack",
         "description": "I had the opportunity to master Kubernetes and learn efficient utilization of this powerful container orchestration platform. Through hands-on challenges and collaborative exercises, I gained practical insights into building resilient, scalable, and cloud-native solutions using Kubernetes.",
         "dates": "Attained Oct 2018 • By Microsoft",
-        "image": "images/Microsoft_logo.svg.png",
+        "image": "images/projects/Microsoft_logo.svg.png",
         "link": "#"
       },
       {
-        "name": "SSW Angular Hackathon",
+        "name": "SSW Angular Hack",
         "description": "Pitched an idea with the Youtube API to create a better viewing experience for watching videos from subscriptions. ",
         "dates": "Runners Up Award • Attained Mar 2018 • By SSW",
         "image": "images/projects/ssw-logo.png",
