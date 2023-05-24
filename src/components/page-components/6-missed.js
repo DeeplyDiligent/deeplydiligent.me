@@ -41,7 +41,7 @@ const Missed = React.forwardRef(({}, ref) => {
         What I've Missed...
       </h1>
       <h3 className="offset-md-1 pl-4 font-weight-bold my-4">Certifications</h3>
-      <div className="row offset-md-1 col-md-10 mx-auto">
+      <div className="row offset-md-1 col-md-10 mx-auto justify-content-center">
         {data.allDataJson.nodes[0].certifications.certList.map(cert => (
           <Card
             image={<img className="custom-responsive-image" src={cert.image} />}
