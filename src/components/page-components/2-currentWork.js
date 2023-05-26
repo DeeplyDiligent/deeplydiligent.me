@@ -27,10 +27,10 @@ const CurrentWork = React.forwardRef(({},ref) => {
       <TitleText className="row d-flex justify-content-center mb-4">
         Currently, I work as a...
       </TitleText>
-      <div className="row">
+      <div className="row justify-content-center">
         {data.allDataJson.nodes[0].workExperience.cards.map((work, index) => (
           <Card
-            className={(index === 0 ? "offset-md-1" : "") + " col-md-5"}
+            className={"col-md-5"}
             title={work.title}
             subTitle={work.subTitle}
             text={work.body}
